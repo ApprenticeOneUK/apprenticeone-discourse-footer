@@ -1,8 +1,7 @@
-heading:
-  default: "This is a header"
-  max: 60
-
-heading_translations:
+community_heading:
+  default: Community
+  max: 1000
+community_heading_translations:
   type: objects
   default: []
   schema:
@@ -13,450 +12,69 @@ heading_translations:
         type: enum
         required: true
         choices:
-          - ar
-          - be
-          - bg
-          - bs_BA
-          - ca
-          - cs
-          - da
-          - de
-          - el
-          - en
-          - en_GB
-          - es
-          - et
-          - fa_IR
-          - fi
-          - fr
-          - gl
-          - he
-          - hr
-          - hu
-          - hy
-          - id
-          - it
-          - ja
-          - ko
-          - lt
-          - lv
-          - nb_NO
-          - nl
-          - pl_PL
-          - pt
-          - pt_BR
-          - ro
-          - ru
-          - sk
-          - sl
-          - sq
-          - sr
-          - sv
-          - sw
-          - te
-          - th
-          - tr_TR
-          - ug
-          - uk
-          - ur
-          - vi
-          - zh_CN
-          - zh_TW
+        - ar
+        - be
+        - bg
+        - bs_BA
+        - ca
+        - cs
+        - da
+        - de
+        - el
+        - en
+        - en_GB
+        - es
+        - et
+        - fa_IR
+        - fi
+        - fr
+        - gl
+        - he
+        - hr
+        - hu
+        - hy
+        - id
+        - it
+        - ja
+        - ko
+        - lt
+        - lv
+        - nb_NO
+        - nl
+        - pl_PL
+        - pt
+        - pt_BR
+        - ro
+        - ru
+        - sk
+        - sl
+        - sq
+        - sr
+        - sv
+        - sw
+        - te
+        - th
+        - tr_TR
+        - ug
+        - uk
+        - ur
+        - vi
+        - zh_CN
+        - zh_TW
       text:
         type: string
         required: true
         validations:
-          max_length: 60
-
-blurb:
-  default: "Ius vitae ornatus at, ei mea sumo quot dicant. Ei tale democritum eos, in mea timeam accumsan forensibus. Ei his aperiam suavitate. Et debitis convenire sea, viris dictas latine."
-  max: 300
-
-blurb_translations:
+          max_length: 1000
+community_links:
   type: objects
-  default: []
   schema:
-    name: translation
-    identifier: locale
-    properties:
-      locale:
-        type: enum
-        required: true
-        choices:
-          - ar
-          - be
-          - bg
-          - bs_BA
-          - ca
-          - cs
-          - da
-          - de
-          - el
-          - en
-          - en_GB
-          - es
-          - et
-          - fa_IR
-          - fi
-          - fr
-          - gl
-          - he
-          - hr
-          - hu
-          - hy
-          - id
-          - it
-          - ja
-          - ko
-          - lt
-          - lv
-          - nb_NO
-          - nl
-          - pl_PL
-          - pt
-          - pt_BR
-          - ro
-          - ru
-          - sk
-          - sl
-          - sq
-          - sr
-          - sv
-          - sw
-          - te
-          - th
-          - tr_TR
-          - ug
-          - uk
-          - ur
-          - vi
-          - zh_CN
-          - zh_TW
-      text:
-        type: string
-        required: true
-        validations:
-          max_length: 300
-
-sections:
-  type: objects
-  default: []
-  schema:
-    name: link section
+    name: link
     identifier: text
     properties:
       text:
         type: string
         required: true
-        validations:
-          min_length: 1
-          max_length: 1000
-      title:
-        type: string
-        validations:
-          min_length: 1
-          max_length: 1000
-      links:
-        type: objects
-        schema:
-          name: link
-          identifier: text
-          properties:
-            text:
-              type: string
-              required: true
-              validations:
-                min_length: 1
-                max_length: 1000
-            url:
-              type: string
-              required: true
-              validations:
-                min_length: 1
-                max_length: 2048
-            target:
-              type: enum
-              default: _blank
-              choices:
-                - _blank
-                - _self
-                - _parent
-                - _top
-            title:
-              type: string
-              validations:
-                min_length: 1
-                max_length: 1000
-            referrer_policy:
-              type: enum
-              default: no-referrer-when-downgrade
-              choices:
-                - no-referrer
-                - no-referrer-when-downgrade
-                - origin
-                - origin-when-cross-origin
-                - unsafe-url
-            translations:
-              type: objects
-              schema:
-                name: translation
-                identifier: locale
-                properties:
-                  locale:
-                    type: enum
-                    required: true
-                    choices:
-                      - ar
-                      - be
-                      - bg
-                      - bs_BA
-                      - ca
-                      - cs
-                      - da
-                      - de
-                      - el
-                      - en
-                      - en_GB
-                      - es
-                      - et
-                      - fa_IR
-                      - fi
-                      - fr
-                      - gl
-                      - he
-                      - hr
-                      - hu
-                      - hy
-                      - id
-                      - it
-                      - ja
-                      - ko
-                      - lt
-                      - lv
-                      - nb_NO
-                      - nl
-                      - pl_PL
-                      - pt
-                      - pt_BR
-                      - ro
-                      - ru
-                      - sk
-                      - sl
-                      - sq
-                      - sr
-                      - sv
-                      - sw
-                      - te
-                      - th
-                      - tr_TR
-                      - ug
-                      - uk
-                      - ur
-                      - vi
-                      - zh_CN
-                      - zh_TW
-                  text:
-                    type: string
-                  title:
-                    type: string
-      translations:
-        type: objects
-        schema:
-          name: translation
-          identifier: locale
-          properties:
-            locale:
-              type: enum
-              required: true
-              choices:
-                - ar
-                - be
-                - bg
-                - bs_BA
-                - ca
-                - cs
-                - da
-                - de
-                - el
-                - en
-                - en_GB
-                - es
-                - et
-                - fa_IR
-                - fi
-                - fr
-                - gl
-                - he
-                - hr
-                - hu
-                - hy
-                - id
-                - it
-                - ja
-                - ko
-                - lt
-                - lv
-                - nb_NO
-                - nl
-                - pl_PL
-                - pt
-                - pt_BR
-                - ro
-                - ru
-                - sk
-                - sl
-                - sq
-                - sr
-                - sv
-                - sw
-                - te
-                - th
-                - tr_TR
-                - ug
-                - uk
-                - ur
-                - vi
-                - zh_CN
-                - zh_TW
-            text:
-              type: string
-            title:
-              type: string
-
-small_links:
-  type: objects
-  default:
-    - text: Privacy
-      url: "#"
-      target: _blank
-    - text: Terms of service
-      url: "#"
-      target: _blank
-    - text: About
-      url: "#"
-      target: _blank
-  schema:
-    name: small link
-    identifier: text
-    properties:
-      text:
-        type: string
-        required: true
-        validations:
-          min: 1
-          max: 1000
-      url:
-        type: string
-        required: true
-        validations:
-          min: 1
-          max: 2048
-          url: true
-      target:
-        type: enum
-        default: _blank
-        choices:
-          - _blank
-          - _self
-          - _parent
-          - _top
-      css_class:
-        type: string
-        validations:
-          min: 1
-          max: 50
-      translations:
-        type: objects
-        schema:
-          name: translation
-          identifier: locale
-          properties:
-            locale:
-              type: enum
-              required: true
-              choices:
-                - ar
-                - be
-                - bg
-                - bs_BA
-                - ca
-                - cs
-                - da
-                - de
-                - el
-                - en
-                - en_GB
-                - es
-                - et
-                - fa_IR
-                - fi
-                - fr
-                - gl
-                - he
-                - hr
-                - hu
-                - hy
-                - id
-                - it
-                - ja
-                - ko
-                - lt
-                - lv
-                - nb_NO
-                - nl
-                - pl_PL
-                - pt
-                - pt_BR
-                - ro
-                - ru
-                - sk
-                - sl
-                - sq
-                - sr
-                - sv
-                - sw
-                - te
-                - th
-                - tr_TR
-                - ug
-                - uk
-                - ur
-                - vi
-                - zh_CN
-                - zh_TW
-            text:
-              type: string
-
-social_links:
-  type: objects
-  default:
-    - text: Facebook
-      title: Join us on Facebook
-      url: "#"
-      target: _blank
-      icon_name: fab-facebook
-    - text: Twitter
-      title: Show some love on Twitter
-      url: "#"
-      target: _blank
-      icon_name: fab-twitter
-    - text: Youtube
-      title: Check out our latest videos on Youtube
-      url: "#"
-      target: _blank
-      icon_name: fab-youtube
-  schema:
-    name: social link
-    identifier: text
-    properties:
-      text:
-        type: string
-        required: true
-        validations:
-          min_length: 1
-          max_length: 1000
-      title:
-        type: string
         validations:
           min_length: 1
           max_length: 1000
@@ -466,20 +84,28 @@ social_links:
         validations:
           min_length: 1
           max_length: 2048
-          url: true
       target:
-        type: string
-        default: _blank
+        type: enum
+        default: _self
         choices:
-          - _blank
-          - _self
-          - _parent
-          - _top
-      icon_name:
+        - _blank
+        - _self
+        - _parent
+        - _top
+      title:
         type: string
         validations:
           min_length: 1
-          max_length: 200
+          max_length: 1000
+      referrer_policy:
+        type: enum
+        default: no-referrer-when-downgrade
+        choices:
+        - no-referrer
+        - no-referrer-when-downgrade
+        - origin
+        - origin-when-cross-origin
+        - unsafe-url
       translations:
         type: objects
         schema:
@@ -490,64 +116,252 @@ social_links:
               type: enum
               required: true
               choices:
-                - ar
-                - be
-                - bg
-                - bs_BA
-                - ca
-                - cs
-                - da
-                - de
-                - el
-                - en
-                - en_GB
-                - es
-                - et
-                - fa_IR
-                - fi
-                - fr
-                - gl
-                - he
-                - hr
-                - hu
-                - hy
-                - id
-                - it
-                - ja
-                - ko
-                - lt
-                - lv
-                - nb_NO
-                - nl
-                - pl_PL
-                - pt
-                - pt_BR
-                - ro
-                - ru
-                - sk
-                - sl
-                - sq
-                - sr
-                - sv
-                - sw
-                - te
-                - th
-                - tr_TR
-                - ug
-                - uk
-                - ur
-                - vi
-                - zh_CN
-                - zh_TW
+              - ar
+              - be
+              - bg
+              - bs_BA
+              - ca
+              - cs
+              - da
+              - de
+              - el
+              - en
+              - en_GB
+              - es
+              - et
+              - fa_IR
+              - fi
+              - fr
+              - gl
+              - he
+              - hr
+              - hu
+              - hy
+              - id
+              - it
+              - ja
+              - ko
+              - lt
+              - lv
+              - nb_NO
+              - nl
+              - pl_PL
+              - pt
+              - pt_BR
+              - ro
+              - ru
+              - sk
+              - sl
+              - sq
+              - sr
+              - sv
+              - sw
+              - te
+              - th
+              - tr_TR
+              - ug
+              - uk
+              - ur
+              - vi
+              - zh_CN
+              - zh_TW
             text:
               type: string
             title:
               type: string
-
+  default:
+  - text: Browse discussions
+    url: /latest
+    target: _self
+  - text: Start a discussion
+    url: /new-topic
+    target: _self
+policy_heading:
+  default: Policy
+  max: 1000
+policy_heading_translations:
+  type: objects
+  default: []
+  schema:
+    name: translation
+    identifier: locale
+    properties:
+      locale:
+        type: enum
+        required: true
+        choices:
+        - ar
+        - be
+        - bg
+        - bs_BA
+        - ca
+        - cs
+        - da
+        - de
+        - el
+        - en
+        - en_GB
+        - es
+        - et
+        - fa_IR
+        - fi
+        - fr
+        - gl
+        - he
+        - hr
+        - hu
+        - hy
+        - id
+        - it
+        - ja
+        - ko
+        - lt
+        - lv
+        - nb_NO
+        - nl
+        - pl_PL
+        - pt
+        - pt_BR
+        - ro
+        - ru
+        - sk
+        - sl
+        - sq
+        - sr
+        - sv
+        - sw
+        - te
+        - th
+        - tr_TR
+        - ug
+        - uk
+        - ur
+        - vi
+        - zh_CN
+        - zh_TW
+      text:
+        type: string
+        required: true
+        validations:
+          max_length: 1000
+policy_links:
+  type: objects
+  schema:
+    name: link
+    identifier: text
+    properties:
+      text:
+        type: string
+        required: true
+        validations:
+          min_length: 1
+          max_length: 1000
+      url:
+        type: string
+        required: true
+        validations:
+          min_length: 1
+          max_length: 2048
+      target:
+        type: enum
+        default: _self
+        choices:
+        - _blank
+        - _self
+        - _parent
+        - _top
+      title:
+        type: string
+        validations:
+          min_length: 1
+          max_length: 1000
+      referrer_policy:
+        type: enum
+        default: no-referrer-when-downgrade
+        choices:
+        - no-referrer
+        - no-referrer-when-downgrade
+        - origin
+        - origin-when-cross-origin
+        - unsafe-url
+      translations:
+        type: objects
+        schema:
+          name: translation
+          identifier: locale
+          properties:
+            locale:
+              type: enum
+              required: true
+              choices:
+              - ar
+              - be
+              - bg
+              - bs_BA
+              - ca
+              - cs
+              - da
+              - de
+              - el
+              - en
+              - en_GB
+              - es
+              - et
+              - fa_IR
+              - fi
+              - fr
+              - gl
+              - he
+              - hr
+              - hu
+              - hy
+              - id
+              - it
+              - ja
+              - ko
+              - lt
+              - lv
+              - nb_NO
+              - nl
+              - pl_PL
+              - pt
+              - pt_BR
+              - ro
+              - ru
+              - sk
+              - sl
+              - sq
+              - sr
+              - sv
+              - sw
+              - te
+              - th
+              - tr_TR
+              - ug
+              - uk
+              - ur
+              - vi
+              - zh_CN
+              - zh_TW
+            text:
+              type: string
+            title:
+              type: string
+  default:
+  - text: Privacy Policy
+    url: /privacy
+    target: _self
+  - text: Terms of Service
+    url: /tos
+    target: _self
+  - text: Community Guidelines
+    url: /guidelines
+    target: _self
+  - text: Cookie Policy
+    url: /pub/cookie-policy
+    target: _self
+  - text: Safeguarding Policy
+    url: /pub/safeguarding
+    target: _self
 show_footer_on_login_required_page:
   default: true
-
-svg_icons:
-  default: "fab-facebook|fab-twitter|fab-youtube"
-  type: "list"
-  list_type: "compact"
